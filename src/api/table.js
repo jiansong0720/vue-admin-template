@@ -1,9 +1,18 @@
 import request from '@/utils/request'
 
-export function getList(params) {
+// 获取用户分页列表
+export function getUserPageList(params) {
   return request({
-    url: '/table/list',
+    url: '/user/pageList',
     method: 'get',
     params
+  })
+}
+
+// 删除用户
+export function deleteUser(id) {
+  return request({
+    url: '/user/delete/' + id,
+    method: 'delete'
   })
 }
